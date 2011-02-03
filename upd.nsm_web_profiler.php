@@ -14,7 +14,7 @@
 
 class Nsm_web_profiler_upd
 {
-	public $version = '1.0.0';
+	public $version = '0.0.1';
 	private $has_cp_backend = false;
 	private $has_publish_fields = false;
 	private $has_tabs = false;
@@ -137,27 +137,5 @@ class Nsm_web_profiler_upd
 
 		return TRUE;
 	}
-
-	
-	private function tabs()
-	{
-		// The tab key must be the addon class name from what I can tell
-		// I don't think it's possible to add more than one tab either
-		$tab_key = strtolower(substr(__CLASS__, 0, -4));
-		return array
-		(
-			$this->addon_id => array
-			(
-				"field_1" => array(
-					'visible'		=> 'true',
-					'collapse'		=> 'false',
-					'htmlbuttons'	=> 'false',
-					'width'			=> '100%'
-				)
-			)
-		);
-		
-	}
-
 
 }

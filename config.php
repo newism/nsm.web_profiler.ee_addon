@@ -12,6 +12,6 @@
  */
 
 $config['name'] 	= "NSM Web Profiler";
-$config["version"] 	= "0.0.0";
+$config["version"] 	= "0.0.1";
 
 $config['nsm_addon_updater']['versions_xml'] = 'http://github.com/newism/nsm.web_profiler.ee_addon/raw/master/versions.xml';
