@@ -13,7 +13,8 @@
 		-webkit-box-shadow:0 -2px 2px rgba(0,0,0,.1);
 		-moz-box-shadow:0 -2px 2px rgba(0,0,0,.1);
 		vertical-align:middle;
-		text-transform:uppercase
+		text-transform:uppercase;
+		z-index:1000;
 	}
 	#nsm-web-profiler > span,
 	#nsm-web-profiler > a {
