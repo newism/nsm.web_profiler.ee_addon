@@ -45,10 +45,25 @@ class Nsm_web_profiler {
 		$EE =& get_instance();
 		if($EE->session->userdata['group_id'] != 1)
 			return false;
-		return $EE->load->_ci_load(array(
-			'_ci_vars' => array(),
-			'_ci_path' => PATH_THIRD . $this->addon_id . '/views/module/toolbar.php',
-			'_ci_return' => true
-		));
+			
+		if(APP_VER < '2.1.5') {
+			// EE < .2.2.0
+			return $EE->load->_ci_load(array(
+				'_ci_vars' => array(),
+				'_ci_path' => PATH_THIRD . $this->addon_id . '/views/module/toolbar.php',
+				'_ci_return' => true
+			));
+		}else{
+			$EE->load->add_package_path(PATH_THIRD . 'nsm_web_profiler');
+			return $EE->load->view('module/toolbar', array(), TRUE);
+		}
 	}
+	
+	public function disable_ee_debugging() {
+		$EE =& get_instance();
+		$EE->output->enable_profiler(false);
+		$EE->TMPL->debugging = false;
+		return '';
+	}
+	
 }
