@@ -14,7 +14,7 @@
 		-moz-box-shadow:0 -2px 2px rgba(0,0,0,.1);
 		vertical-align:middle;
 		text-transform:uppercase;
-		z-index:1000;
+		z-index:1001;
 	}
 	#nsm-web-profiler > span,
 	#nsm-web-profiler > a {
@@ -28,6 +28,8 @@
 	}
 	#nsm-web-profiler img{
 		vertical-align:middle;
+		display:inline;
+		max-width:normal;
 	}
 </style>
 <div id="nsm-web-profiler">
@@ -38,4 +40,6 @@
 	<a href="{path=logout}">Logout</a>
 	<a href="{cp_url}">Control Panel</a>
 	<span>PHP <?php echo(phpversion()); ?></span>
+	<span><?php echo number_format(memory_get_peak_usage()); ?> B</span>
+	<?php if(defined(NSM_ENV)) : ?><span><?php echo(NSM_ENV); ?></span><?php endif; ?>
 </div>
