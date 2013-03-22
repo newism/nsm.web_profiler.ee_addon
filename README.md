@@ -17,4 +17,5 @@ There's only one tag. Place it in the footer of your site.
 Acknowledgements:
 -----------------
 
-[Erick Reagan](http://erikreagan.com/) created a [similar addon](http://erikreagan.com/projects/er-developer-toolbar/) for EE 1.0. Ericks version has many more features.
+* [Eric Lamb](http://blog.ericlamb.net/ "Eric Lamb") ([mithra62](http://mithra62.com/index "mithra62")) and [Christopher Imrie](https://github.com/ckimrie/ "Christopher Imrie") have created [a much more powerful version](https://github.com/mithra62/ee_debug_toolbar).
+* [Erick Reagan](http://erikreagan.com/) created a [similar addon](http://erikreagan.com/projects/er-developer-toolbar/) for EE 1.0. Ericks version has many more features.
